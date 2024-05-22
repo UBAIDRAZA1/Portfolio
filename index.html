@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+    /* Basic styling */
+    .portfolio-box {
+        border: 5px solid #f3cbcb; /* Light pink border */
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: #f9f9f9; /* Fallback color */
+        box-shadow: 0 4px 8px rgba(128, 0, 128, 0.3); /* Purple shadow */
+        min-height: 100vh; /* Ensure the box covers the whole viewport */
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        background-color: #3d3d75;
+        color: #fff;
+        padding: 1px 0;
+        text-align: center;
+        margin-top: auto; /* Push the footer to the bottom */
+        width: 100%;
+    }
+
+    header {
+        color: #fff;
+        display: flex;
+        justify-content: space-between; /* Align content horizontally */
+        align-items: center; /* Align content vertically */
+    }
+    
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+  
+    nav ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+   
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        background-color: #3d3d75; /* Matched background color */
+        padding: 5px 10px; /* Add padding to adjust background size */
+        border-radius: 5px; /* Optional: Add border-radius for a rounded look */
+    }
+
+    /* Image styling */
+    .profile-image {
+        width: 200px; /* Adjust image width as needed */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Make the image round */
+        margin-right: 20px; /* Add space between image and text */
+        float: left; /* Align image to the left */
+    }
+
+    /* Text styling */
+    .name-heading {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: xx-large;
+        margin-left: 50px;
+        margin-top: 20px; /* Add margin between header and text */
+    }
+
+.developer-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    margin-left: 50px;
+    margin-top: 20px; /* Add margin between heading and paragraph */
+    overflow: hidden; /* Hide overflow text */
+    word-wrap: break-word; /* Allow text to wrap */
+    border-right: 2px solid #000; /* Simulate cursor */
+}
+
+</style>
+</head>
+<body>
+
+<div class="portfolio-box">
+    <header>
+        <div>
+            <p>Developer</p>
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Name heading -->
+    <h2 class="name-heading"><u>Hello! &nbsp  I'm Muhammad Ubaid Raza.</u></h2>
+    <!-- Developer paragraph -->
+    <div class="developer-text" id="developer-text">
+        <img src="https://raw.githubusercontent.com/UBAIDRAZA1/UbaidRaza/main/WhatsApp%20Image%202024-05-17%20at%207.38.28%20AM.jpeg"  alt="Developer" class="profile-image">
+        <p id="typing-text">I am a web developer who passionately expresses my creativity in the digital world. I bring with me a wealth of experience and a knack for tackling various challenges. My goal is not just to build websites but to provide excellent solutions to my clients by enhancing innovation and user experience in every project. My favorite technologies include HTML, CSS, JavaScript, and PHP, and I am always ready to learn and adopt new tools and techniques. My aim is not just to write lines of code but to create an engaging and functional digital experience that sticks with users.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    const text = document.getElementById('typing-text').innerText;
+    document.getElementById('typing-text').innerText = '';
+    let i = 0;
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById('typing-text').innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 10);
+        }
+    }
+    typeWriter();
+</script>
+
+</body>
+</html>
